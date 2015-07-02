@@ -3,13 +3,13 @@
 import feedparser
 
 # deals with where all the feeds come in                                                                                                              
-#feed = feedparser.parse('http://www.reddit.com/r/python/.rss')                                                                                       
-#feed = feedparser.parse('http://feeds.bbci.co.uk/news/scotland/rss.xml?edition=uk')                                                                  
+feeda = feedparser.parse('http://krebsonsecurity.com/feed/')
+feedb = feedparser.parse('https://www.grc.com/news.htm')
 
 # multiple feed test                                                                                                                                  
 FEED_List = [
-    'http://feeds.bbci.co.uk/news/scotland/rss.xml?edition=uk',
-    'http://www.gameinformer.com/b/MainFeed.aspx?Tags=preview',
+    'http://krebsonsecurity.com/feed/',
+    'https://www.grc.com/news.htm',
     ]
 
 feeds = []
@@ -18,24 +18,25 @@ for url in FEED_List:
 
 for feed in feeds:
     for post in feed.entries:
-        print len(post)
+#        print len(post)                                                                                                                              
         print post.title
-        
-# deals with kewords                                                                                                                                  
+
+# deals with keywords                                                                                                                                  
 
 keyword = 'hacked'
 
 # parses and processes feeds                                                                                                                          
 
-title = feed['entries'][1].title,
-description =  feed['entries'][1].summary,
-url = feed['entries'][1].link,
+title = feeda['entries'][1].title,
+description =  feeda['entries'][1].summary,
+url = feeda['entries'][1].link,
+
 posts = []
-for i in range(0,len(feed['entries'])):
+for i in range(0,len(feeda['entries'])):
     posts.append({
-        'title': feed['entries'][i].title,
-        'description': feed['entries'][i].summary,
-        'url': feed['entries'][i].link,
+        'title': feeda['entries'][i].title,
+        'description': feeda['entries'][i].summary,
+        'url': feeda['entries'][i].link,
     })
 
 # searches feeds for keywords                                                                                                                         
@@ -43,18 +44,17 @@ for i in range(0,len(feed['entries'])):
 
 
 # displays results                                                                                                                                    
-print title
-print description
-print url
+#print title                                                                                                                                          
+#print description                                                                                                                                    
+#print url                                                                                                                                            
 print 'Feed Details'
 print '****'
 print 'Available Feeds'
-print feed['feed']['link']
+print feeda['feed']['link']
 print '****'
 print 'Number of Entries'
 print len(posts)
 print 'Most Recent Entry'
-print feed['entries'][0]['title']
-print feed.entries[0]['link']
-print feed
-
+print feeda['entries'][0]['title']
+print feeda.entries[0]['link']
+#print feed      
