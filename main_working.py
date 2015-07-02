@@ -42,26 +42,46 @@ for i in range(0,len(feeda['entries'])):
         'url': feeda['entries'][i].link,
     })
 
+titleb = feedb['entries'][1].title,
+descriptionb = feedb['entries'][1].summary,
+urlb = feeda['entries'][1].link,
+
+postsb = []
+    for i in range(0,len(feedb['entries'])):
+    posts.append({
+        'title': feedb['entries'][i].title,
+        'description': feedb['entries'][i].summary,
+        'url': feedb['entries'][i].link,
+})
+
 # searches feeds for keywords                                                                                                                         
 
 
 
 # displays results                                                                                                                                    
-#print title                                                                                                                                          
-#print description                                                                                                                                    
-#print url                                                                                                                                            
+                                                                                                                                            
 print 'Feed Details'
 print '****'
 print 'Available Feeds'
 print feeda['feed']['link']
-print feedb['feed']['link']
-print '****'
 print 'Number of Entries'
 print len(posts)
+print title                                                                                                                                          
+print description                                                                                                                                    
+print url
+print '****'
+print feedb['feed']['link']
+print 'Number of Entries'
+print len(postsb)
+print titleb                                                                                                                                          
+print descriptionb                                                                                                                                    
+print urlb
+print '****'
+
 print '****'
 print 'Most Recent Entries'
 print feeda['entries'][0]['title']
 print feeda.entries[0]['link']
 print feedb['entries'][0]['title']
 print feedb.entries[0]['link']
-#print feed      
+#print feed  
