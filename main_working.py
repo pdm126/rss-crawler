@@ -4,12 +4,12 @@ import feedparser
 
 # deals with where all the feeds come in                                                                                                              
 feeda = feedparser.parse('http://krebsonsecurity.com/feed/')
-feedb = feedparser.parse('https://www.grc.com/news.htm')
+feedb = feedparser.parse('http://www.tripwire.com/state-of-security/feed/')
 
 # multiple feed test                                                                                                                                  
 FEED_List = [
     'http://krebsonsecurity.com/feed/',
-    'https://www.grc.com/news.htm',
+    'http://www.tripwire.com/state-of-security/feed/'
     ]
 
 feeds = []
@@ -51,10 +51,14 @@ print 'Feed Details'
 print '****'
 print 'Available Feeds'
 print feeda['feed']['link']
+print feedb['feed']['link']
 print '****'
 print 'Number of Entries'
 print len(posts)
-print 'Most Recent Entry'
+print '****'
+print 'Most Recent Entries'
 print feeda['entries'][0]['title']
 print feeda.entries[0]['link']
+print feedb['entries'][0]['title']
+print feedb.entries[0]['link']
 #print feed      
