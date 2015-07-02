@@ -2,10 +2,13 @@
 
 import feedparser
 
-# deals with where all the feeds come in                                                                                                              
+# deals with where all the feeds come in
+
+# method one
 feeda = feedparser.parse('http://krebsonsecurity.com/feed/')
 feedb = feedparser.parse('http://www.tripwire.com/state-of-security/feed/')
 
+# method two
 # multiple feed test                                                                                                                                  
 FEED_List = [
     'http://krebsonsecurity.com/feed/',
