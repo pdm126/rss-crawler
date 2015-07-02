@@ -2,6 +2,8 @@
 
 import feedparser
 
+
+
 # deals with where all the feeds come in
 
 # method one
@@ -12,7 +14,8 @@ feedb = feedparser.parse('http://www.tripwire.com/state-of-security/feed/')
 # multiple feed test                                                                                                                                  
 FEED_List = [
     'http://krebsonsecurity.com/feed/',
-    'http://www.tripwire.com/state-of-security/feed/'
+    'http://www.tripwire.com/state-of-security/feed/',
+    'https://threatpost.com/feed'
     ]
 
 feeds = []
@@ -22,7 +25,12 @@ for url in FEED_List:
 for feed in feeds:
     for post in feed.entries:
 #        print len(post)                                                                                                                              
+        print '++++++'
         print post.title
+        print post.description
+        print post.link
+        print '++++++'
+        
 
 # deals with keywords                                                                                                                                  
 
@@ -47,7 +55,7 @@ descriptionb = feedb['entries'][1].summary,
 urlb = feeda['entries'][1].link,
 
 postsb = []
-    for i in range(0,len(feedb['entries'])):
+for i in range(0,len(feedb['entries'])):
     posts.append({
         'title': feedb['entries'][i].title,
         'description': feedb['entries'][i].summary,
