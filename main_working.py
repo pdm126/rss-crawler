@@ -19,7 +19,7 @@ for url in FEED_List:
 for feed in feeds:
     for post in feed.entries:
         print len(post)
-        print feed.title
+        print post.title
         
 # deals with kewords                                                                                                                                  
 
