@@ -1,26 +1,27 @@
 #!/usr/bin/env python2.7                                                                                                                              
 
 import feedparser
+import sys
+
+# deals with where all the feeds 
+feeds = []
+Feed_list = []
+#f = sys.argv[1]
+
+#with open(f, r) as f:
+#    Feed_list = f.readlines()
 
 
-
-# deals with where all the feeds come in
-
-# method one
-feeda = feedparser.parse('http://krebsonsecurity.com/feed/')
-feedb = feedparser.parse('http://www.tripwire.com/state-of-security/feed/')
-
-# method two
 # multiple feed test                                                                                                                                  
-FEED_List = [
+Feed_list = [
     'http://krebsonsecurity.com/feed/',
     'http://www.tripwire.com/state-of-security/feed/',
     'https://threatpost.com/feed'
     ]
 
-feeds = []
-for url in FEED_List:
+for url in Feed_list:
     feeds.append(feedparser.parse(url))
+
 
 
 def full_list():
@@ -33,10 +34,18 @@ def full_list():
             print post.link
             print '++++++'
 
+def latest_list():
+   for feed in feeds:
+      for post in feed.entries:
+          print post.title
+          print ' '
+          print post.summary
+          print post.link
+          print '+++++'
 # deals with keywords                                                                                                                                  
 
 keyword = 'hacked'
 
-
-full_list()
+latest_list()
+#full_list()
 
