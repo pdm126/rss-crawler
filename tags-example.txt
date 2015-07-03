@@ -1,0 +1,18 @@
+small example of tags
+
+Featured Articles  Tripwire News  2015 Data Breach Investigations Report  breach  cyberattack  Energy  Executives
+ Featured Articles  IT Security and Data Protection  hacking  intellectual property  security
+ Latest Security News  business email compromise  FBI  Financial Services Information Sharing and Analysis Center  Fraud  scam  wire transfer
+ Cyber Security  Featured Articles  2015 Data Breach Investigations Report  attack patterns  data breach  infographic  Where Are Your Cyberattacks Coming From?
+ Featured Articles  Risk Management  breach  Cyber Criminals  gift card fraud  hack  Starbucks  Woolworth
+ Malware  Ransomware  Web Security  Angler Exploit Kit  avoid detection  Brad Duncan  Cryptowall  Cryptowall 3.0  drive-by downloads  evasion techniques  ransomware  SANS Internet Storm Center
+ Government  Malware  Social Engineering  Vulnerabilities  Web Security  FBI  hacking team  malware  Phishing  Spyware  Vupen
+ Vulnerabilities  Web Security  Cisco  SSH  vulnerabilities  Web security
+ Hacks  Vulnerabilities  Web Security  Akamai  DDoS  DDoS attacks  DDoS reflection attack  Denial of Service Attacks  distributed denial of service attack  IP packets 
+ Netopia-3000/2000 routers  Network security  PLXsert  Prolexic  RFC1058  RFC1923  RIPv1  Routing Information Protocol
+ Vulnerabilities  Web Security  API  Phishing  Pinterest  session hijacking  vulnerabilities  Vulnerability Lab
+ Vulnerabilities  Web Security  LifeLock  vulnerabilities  Web security  XSS
+ Apple  Web Security  apple  Apple Patch  apple security  Cisco  Cisco FreeSentry  Cisco Talos  iOS patch  OS X Patch  QuickTime patch  Quicktime Security  QuickTime vulnerability  QuickTime zero day  stbl movie atom  Use After Free vulnerability
+ Compliance  Data Breaches  Featured  Government
+ Cloud Security  Featured  Web Security  big data  Cisco  Cisco acquires OpenDNS  Cisco Security  DNS  DNS infrastructure  OpenDNS  SaaS  security as a service  Software as a Service  threat intelligence
+ Data Breaches  Featured  Government  Privacy  Vulnerabilities  government  Office of Personnel Management  OPM  vulnerabilities
