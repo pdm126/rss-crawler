@@ -95,6 +95,8 @@ def tag_list():
           tags = tags.replace('label', '')          
           tags = tags.replace("u'", '')          
           tags = tags.replace("'", '')
+          tags = tags.replace("    ", '')
+
 # {'term': u'threat intelligence', 'scheme': None, 'label': None}]
           print tags
     
