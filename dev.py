@@ -2,13 +2,14 @@
 
 import feedparser
 import sys
+import string
 
 # holds the feeds
 
 feeds = []
 Feed_list = []
 kill = 'g'
-
+tags = 'g'
 # multiple feed list                                                                                                                                 
 Feed_list = [
 'http://krebsonsecurity.com/feed/',
@@ -80,7 +81,26 @@ def keyword_full(term):
 				if term not in post.summary:
 					print 'not found'
 					again()
-			
+# tag listing
+
+def tag_list():
+   for feed in feeds:
+      for post in feed.entries:
+          tags = str(post.tags)
+          tags = ''.join([c for c in tags if c not in ('{', '}', ':', '[', ']', ',' )])
+          tags = tags.replace( 'scheme', '' )          
+          tags = tags.replace('term', '')          
+          tags = tags.replace('scheme', '')          
+          tags = tags.replace('None', '')           
+          tags = tags.replace('label', '')          
+          tags = tags.replace("u'", '')          
+          tags = tags.replace("'", '')
+# {'term': u'threat intelligence', 'scheme': None, 'label': None}]
+          print tags
+    
+
+# repeaters			
+
 def	again(): 
 	go_again = raw_input('again? ')
 	if go_again == 'y':
@@ -106,7 +126,8 @@ def menu():
 	print 'c) Top post of feeds'
 	print 'd) Summary List of Feeds'
 	print 'e) Full list of feeds'
-	choice = raw_input('please choose an option ')
+	print 'f) Full tag list'
+        choice = raw_input('please choose an option ')
 	print 'chosen ' + choice + ' good choice. '
 	if choice == 'a':
 		term = raw_input('Search term ?')
@@ -120,5 +141,7 @@ def menu():
 		latest_list()
 	if choice == 'e':
 		full_list() 
+        if choice == 'f':
+                tag_list()
 
 menu()
